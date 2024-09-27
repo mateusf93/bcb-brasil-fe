@@ -1,0 +1,33 @@
+
+<div class="app-container">
+  <div class="header-container">
+    <app-header></app-header>
+  </div>
+  <div class="sidebar-container">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <div  class="app-user">
+    <div class="sendmessage-container">
+      <h3>Histórico de Mensagens</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Telefone Destinatário</th>
+              <th>Mensagem</th>
+              <th>Tipo de Envio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let message of userMessage">
+              <td>{{ message.telefoneDest }}</td>
+              <td>{{ message.textMessage || 'No message' }}</td>
+              <td>{{ message.sendType }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

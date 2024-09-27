@@ -1,0 +1,19 @@
+<div class="app-container">
+  <div class="header-container">
+    <app-header></app-header>
+  </div>
+  <div class="sidebar-container">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <div *ngIf="role === 'USER'" class="app-user">
+    <div class="user-info-container">
+      <app-user-info></app-user-info>
+    </div>
+  </div>
+  <div *ngIf="role === 'ADMIN'" class="app-admin">
+    <div class="admin-info-container">
+      <app-admin-home></app-admin-home>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<nav class="sidebar">
+  <div class="sidebar-header">
+      <h2>Menu</h2>
+  </div>
+  <ul class="sidebar-menu">
+      <li>
+          <button class="sidebar-btn" type="button" (click)="home()">
+              <i class="fas fa-home"></i> Página Inicial
+          </button>
+      </li>
+      <li *ngIf="role === 'USER'">
+          <button class="sidebar-btn" type="button" (click)="message()">
+              <i class="fas fa-paper-plane"></i> Enviar Mensagens
+          </button>
+      </li>
+      <li *ngIf="role === 'USER'">
+          <button class="sidebar-btn" type="button" (click)="userMessage()">
+              <i class="far fa-message"></i> Histórico
+          </button>
+      </li>
+      <li>
+        <button class="logout-btn" type="button" (click)="logout()">
+            <i class="far fa-message"></i> Logout
+        </button>
+    </li>
+  </ul>
+</nav>

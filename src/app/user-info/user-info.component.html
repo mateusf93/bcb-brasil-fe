@@ -1,0 +1,12 @@
+
+<div *ngIf="loading">Loading...</div>
+<h3>Bem vindo {{ user.name }}</h3>
+<div class="card-container" *ngIf="!loading">
+  <div class="card" *ngIf="!loading">
+    <p><strong>Tipo de Plano:</strong> {{ user.balanceType }}</p>
+    <p><strong>Limite de Crédito:</strong> {{ user.totalBalance }}</p>
+    <p><strong>Saldo Atual:</strong> {{ user.currentBalance  }}</p>
+    <p><strong>Gasto Total:</strong> {{ user.totalSpent }}</p>
+  </div>
+</div>
+

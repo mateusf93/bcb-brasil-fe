@@ -1,0 +1,32 @@
+
+<div class="app-container">
+  <div class="header-container">
+    <app-header></app-header>
+  </div>
+  <div class="sidebar-container">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <div *ngIf="role === 'USER'" class="app-user">
+    <div class="sendmessage-container">
+      <h3>Enviar Mensagem!</h3>
+      <div class="card-container">
+        <form class="message-form">
+           <div>
+            <label for="telefoneDest">Telefone Destinatário:</label>
+            <input type="text" id="telefoneDest" name="telefoneDest"  required #telefoneDest= />
+          </div>
+          <div>
+            <label for="sendType">Enviar via as WPP (WhatsApp):</label>
+            <input type="checkbox" id="sendType" name="sendType" required #sendType />
+          </div>
+          <div>
+            <label for="textMessage">Message:</label>
+            <textarea id="textMessage" name="textMessage" required #textMessage=></textarea>
+          </div>
+         <button type="button" (click)="sendMessage()">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
